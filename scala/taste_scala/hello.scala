@@ -1,0 +1,1 @@
+@main def hello() = println("Hellow, World!")
