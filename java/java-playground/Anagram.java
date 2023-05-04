@@ -1,17 +1,15 @@
-package com.company;
-//Program 16: Anagram of Word
-
 import java.util.*;
 
 public class Anagram
 {
 
     void input() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a word : ");
-        String userInput = sc.next().toLowerCase();
-        System.out.println("The Anagrams are : ");
-        display("",userInput);
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Enter a word : ");
+            String userInput = sc.next().toLowerCase();
+            System.out.println("The Anagrams are : ");
+            display("",userInput);
+        }
     }
 
     void display(String s1, String s2)
@@ -33,7 +31,7 @@ public class Anagram
     }
 
 
-    public static void main()throws Exception
+    public static void main(String[] args)throws Exception
     {
         Anagram ob=new Anagram();
         ob.input();
